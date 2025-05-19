@@ -1,0 +1,118 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix wd: <https://www.wikidata.org/wiki/> .
+@prefix wdp: <https://www.wikidata.org/wiki/Property:> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+wd:Q18127 a rdfs:Class ;
+    rdfs:label "Label"@en .
+
+wd:Q4120621 a rdfs:Class ;
+    rdfs:label "Ranking"@en .
+
+wd:Q6256 a rdfs:Class ;
+    rdfs:label "Country"@en .
+
+wd:Q639669 a rdfs:Class ;
+    rdfs:label "Artist"@en .
+
+wd:Q6581072 a rdfs:Class ;
+    rdfs:label "Female"@en .
+
+wd:Q6581097 a rdfs:Class ;
+    rdfs:label "Male"@en .
+
+wd:Q6738447 a rdfs:Class ;
+    rdfs:label "PublicImage"@en .
+
+wd:Q7366 a rdfs:Class ;
+    rdfs:label "Song"@en .
+
+wd:Q8436 a rdfs:Class ;
+    rdfs:label "Family"@en .
+
+rdfs:label a rdf:Property ;
+    rdfs:label "label"@en ;
+    rdfs:range rdf:langString .
+
+schema:datePosted a rdf:Property ;
+    rdfs:label "datePosted"@en ;
+    rdfs:domain wd:Q4120621 ;
+    rdfs:range xsd:date .
+
+schema:hasLifeTimeSales a rdf:Property ;
+    rdfs:label "hasLifeTimeSales"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range xsd:double .
+
+schema:hasTwitterFollowers a rdf:Property ;
+    rdfs:label "hasTwitterFollowers"@en ;
+    rdfs:domain wd:Q639669 .
+
+schema:hasYoutubeFollowers a rdf:Property ;
+    rdfs:label "hasYoutubeFollowers"@en ;
+    rdfs:domain wd:Q639669 .
+
+schema:text a rdf:Property ;
+    rdfs:label "text"@en ;
+    rdfs:domain wd:Q6738447 ;
+    rdfs:range rdf:langString .
+
+schema:value a rdf:Property ;
+    rdfs:label "value"@en ;
+    rdfs:domain wd:Q4120621 ;
+    rdfs:range xsd:integer .
+
+wdp:P1352 a rdf:Property ;
+    rdfs:label "ranking"@en ;
+    rdfs:domain wd:Q7366 ;
+    rdfs:range wd:Q4120621 .
+
+wdp:P136 a rdf:Property ;
+    rdfs:label "genre"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range rdf:langString .
+
+wdp:P1552 a rdf:Property ;
+    rdfs:label "hasCharacteristic"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range wd:Q6738447,
+        wd:Q8436 .
+
+wdp:P175 a rdf:Property ;
+    rdfs:label "performer"@en ;
+    rdfs:domain wd:Q7366 ;
+    rdfs:range wd:Q639669 .
+
+wdp:P1971 a rdf:Property ;
+    rdfs:label "number of children (-1 if not available)"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range xsd:integer .
+
+wdp:P21 a rdf:Property ;
+    rdfs:label "gender"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range wd:Q6581072,
+        wd:Q6581097 .
+
+wdp:P264 a rdf:Property ;
+    rdfs:label "record label"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range wd:Q18127 .
+
+wdp:P27 a rdf:Property ;
+    rdfs:label "isFrom"@en ;
+    rdfs:domain wd:Q639669 ;
+    rdfs:range wd:Q6256 .
+
+wdp:P444 a rdf:Property ;
+    rdfs:label "score"@en ;
+    rdfs:domain wd:Q6738447 ;
+    rdfs:range xsd:double .
+
+wdp:P577 a rdf:Property ;
+    rdfs:label "publication date"@en ;
+    rdfs:domain wd:Q7366 ;
+    rdfs:range xsd:date .
+
