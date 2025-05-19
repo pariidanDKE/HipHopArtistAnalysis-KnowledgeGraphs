@@ -1,6 +1,6 @@
 # HipHopArtistAnalysis-KnowledgeGraphs
 
-For information on methodology, and analysis of results, please view the report for this course proejct in the repository :** BMKG_Project Report(i6254321)**
+For information on methodology, and analysis of results, please view the report for this course proejct in the repository : **BMKG_Project Report(i6254321)**
 
 #### Details on struct and running it 
 
